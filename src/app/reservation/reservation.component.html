@@ -1,0 +1,74 @@
+<nav class="navbar  navbar-light bg-dark navbar-expand-lg sticky-top transbox flex-md-nowrap p-0 shadow">
+    <div class="container-fluid">
+      <img  class="k"  src="assets/images/logo4.jpg"/>
+      <h4  style="padding-left : 5px" class="" >
+        <a class="navbar-brand text-white" href="#">
+          La Cigale Tabarka
+        </a>
+      </h4>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link  text-white" routerLink="/accueil">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white" routerLink="/utilisateur">Utilisateur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white" routerLink="/reservation">Reservations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/activite">Activité</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white" routerLink="/archive">Archives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white" routerLink="/confirmation">Confirmation</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-4 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link  text-white" routerLink="/login"><h5>Log Out</h5></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<h1> List des Reservations </h1> 
+<table class="table">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Client name</th>
+          <th>Nombre de nuits</th>
+          <th>Nombre de chambres</th>
+          <th>Nombre d'adultes</th>
+          <th>Nombre d'enfants</th>
+          <th> Date de reservation</th>
+          <th> User Id</th>
+
+
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let reservation of myVar">
+          <td>{{ reservation.id }}</td>
+          <td>{{ reservation.client_name }}</td>
+          <td>{{ reservation.nbr_nuits }}</td>
+          <td>{{ reservation.nbr_chambres }}</td>
+          <td>{{ reservation.nbr_adultes }}</td>
+          <td>{{ reservation.nbr_enfants }}</td>
+          <td>{{ reservation.date_reservation }}</td>
+          <td>{{ reservation.user_id }}</td>
+
+
+      </tr>
+  </tbody>
+</table>

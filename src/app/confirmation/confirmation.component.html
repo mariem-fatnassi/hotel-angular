@@ -1,0 +1,95 @@
+<nav class="navbar  navbar-light bg-dark navbar-expand-lg sticky-top transbox flex-md-nowrap p-0 shadow">
+  <div class="container-fluid">
+    <img  class="k"  src="assets/images/logo4.jpg"/>
+    <h4  style="padding-left : 5px" class="" >
+      <a class="navbar-brand text-white" href="#">
+        La Cigale Tabarka
+      </a>
+    </h4>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/utilisateur">Utilisateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/reservation">Reservations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/activite">Activité</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/archive">Archives</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/confirmation">Confirmation</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mb-4 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/login"><h5>Log Out</h5></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="confirmContent.length == 0; else elseBlock" class="alert alert-danger">
+    La Liste des Commandes confirmés est vide
+  </div> 
+  <ng-template #elseBlock> 
+
+    <div class="row">
+      <div class="col-md-9">
+        <button class="btn btn-outline-danger" (click)="clearConfirmation()">
+          Clear Confirmation
+        </button>
+      </div>
+    </div>
+    <br>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom du restaurant</th>
+          <th scope="col">Menu</th>
+          <th scope="col">Fruits</th>
+          <th scope="col">Boissons</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let restconfirm of confirmContent;index as i"> 
+          <th scope="row">{{ restconfirm.id}}</th>
+          <td>{{ restconfirm.nom_restaurant}}</td>
+          <td>{{ restconfirm.menu}}</td>
+          <td>{{ restconfirm.fruits}}</td>
+          <td>{{ restconfirm.boissons}}</td>
+        </tr>
+      </tbody>
+      <thead class="thead-light">
+       
+        
+      </thead>
+    </table>
+   </ng-template>

@@ -1,0 +1,345 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+  <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .heading {
+      text-align: center;
+      font-size: 2.0em;
+      letter-spacing: 1px;
+      padding: 40px;
+      color: white;
+  }
+  
+  .gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-image img {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+  }
+  
+  .img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .transparent-box {
+    height: 250px;
+    width: 350px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .img-box:hover img { 
+    transform: scale(1.1);
+  }
+  
+  .img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+  
+  .img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+  }
+  
+  .img-box:hover {
+    cursor: pointer;
+  }
+  
+  .caption > p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  
+  .opacity-low {
+    opacity: 0.5;
+  }
+  </style>
+
+
+<nav class="navbar  navbar-light bg-dark navbar-expand-lg sticky-top transbox flex-md-nowrap p-0 shadow">
+  <div class="container-fluid">
+    <img  class="k"  src="assets/images/logo4.jpg"/>
+    <h4  style="padding-left : 5px" class="" >
+      <a class="navbar-brand text-white" href="#">
+        La Cigale Tabarka
+      </a>
+    </h4>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/">Home</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mb-4 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/login"><h5>Login</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/gallery"><h5> Gallerie </h5></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+<div class="container py-4" style="font-family: Raleway; background-color: #202125; margin-left: 350px; margin-top: 50px;">
+  <p class="heading"> Gallery</p>
+  <div class="gallery-image">
+    <div class="img-box">
+      <img src="assets/images/img1.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Hotel La Cigale Tabarka</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="assets/images/img2.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Une expérience exceptionnelle à vivre</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="assets/images/img3.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Un véritable havre de paix</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="assets/images/img4.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Endroit idéal</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="assets/images/img5.jpg" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Cap vers un nouvel horizon</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="assets/images/ch2.png" alt="" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Chambres</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+        <img src="assets/images/ch3.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Suites</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/chm1.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Des nuits douces</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/chm3.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Des nuits apaisantes</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/reun.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Réunions et évenements</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/golf1.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Golf</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/golf2.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Parcours exceptionnel</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/golf3.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Golf</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/golf4.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Golf</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/rest1.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Une tranquilité le long d'une plage de sable fin</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/rest2.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Bars</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/rest3.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Restaurants</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/rest4.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Un festival pour vos sens</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/sp1.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Yoga</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/sp2.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Relaxation</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/sp3.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Fitness</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/sp4.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Musculation</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/spa1.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Spa</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/spa2.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Spa</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/spa3.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Piscine</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/spa4.jpg" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Thalasso</p>
+          </div>
+        </div> 
+      </div>
+      <div class="img-box">
+        <img src="assets/images/stade.png" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Complexe Sportif</p>
+          </div>
+        </div> 
+      </div>
+  </div>
+</div>
